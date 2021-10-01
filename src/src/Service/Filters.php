@@ -2,8 +2,6 @@
 
 namespace App\Service;
 
-use App\Util\RequiredFilters;
-
 class Filters
 {
     /**
