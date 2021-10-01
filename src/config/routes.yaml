@@ -1,0 +1,4 @@
+api__question:
+  path:       /api/stackoverflow/questions/{tagged}
+  controller: App\Controller\QuestionApiController::question
+  methods:    GET

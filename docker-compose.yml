@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  webserver:
+    build: ./.docker/webserver
+    container_name: webserver
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      br0:
+        ipv4_address: 192.168.202.2
+
+networks:
+  br0:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.202.0/24
+          gateway: 192.168.202.1
